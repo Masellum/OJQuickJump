@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./static/css/material.min.css">
+    <script src="./static/js/material.min.js"></script>
+    <script src="./static/js/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>OJQJ's Options</title>
+    <style type="text/css">
+        body {
+            padding: 20px;
+            /* margin: 20px; */
+            background: #fafafa;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>修改配置</h3>
+    <p>您可以通过增加配置为 OJQJ 提供对非默认支持 OJ 的支持，也可以启用、禁用或删除已有的配置。</p>
+    <p>OJQJ 工作的原理非常简单。基于对大部分目前较为常用的 OJ 的观察，可以认为某 OJ 的题目地址的模式一般为将某个固定网址模板的某个部分替换成一个对每道题目而言唯一确定的题目编号。因此，只需要找到某个 OJ 的这个网址模板，就可以由题目编号构造出题目地址。</p>
+    <p>请在您设定的题目地址模板中将题号所在位置替换为"${number}"。</p>
+    <p>使用时，只需要按下 Ctrl+Q 或点击右上角的 OJQJ 按钮，按“配置文件名称 + 题目编号”的格式输入，之后按下回车或点击“Jump！”按钮即可。</p>
+    <p>注意：配置文件名称会被自动转换为大写。</p>
+    <h4>增加配置</h4>
+    <form action="#" id="addProfileForm">
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="profileName" autocomplete="off">
+            <label class="mdl-textfield__label" for="profileName">配置文件名称...</label>
+        </div>
+        <span style="margin: 10px"></span>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="urlTemplate" autocomplete="off">
+            <label class="mdl-textfield__label" for="urlTemplate">题目地址模板</label>
+        </div>
+        <span style="margin: 10px"></span>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect" id="addProfileSubmitButton" type="submit">
+            保存配置
+        </button>
+    </form>
+    <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" id="profileListTable">
+        <thead>
+            <tr>
+                <th class="mdl-data-table__cell--non-numeric">配置文件名称</th>
+                <th>题目地址模板</th>
+                <th>操作</th>
+                <span style="align-items: center""></span>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+    <h3>任务列表</h3>
+    <p>TODO</p>
+    <script src="./options.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+{
+  "manifest_version": 2,
+
+  "name": "OJ Quick Jump",
+  "version": "0.1.0",
+  "description": "This extension helps you to jump to a problem page on an OJ quickly.",
+  "author": "Masellum",
+
+  "background": {
+    "scripts": ["eventPage.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_icon": "static/image/icon.png",
+    "default_popup": "popup.html"
+  },
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+Q",
+        "mac": "Command+Q"
+      }
+    }
+  },
+  "icons": {
+    "19": "static/image/icon.png"
+  },
+  "options_page": "options.html",
+  "permissions": [
+    "tabs",
+    "storage"
+  ]
+}
