@@ -16,7 +16,7 @@ function parse(number) {
         onlineJudgeName: number.substring(0, indexOfSpace),
         problemNumber: number.substring(indexOfSpace + 1, number.length)
     };
-    if (profileList[numberObject.onlineJudgeName.toUpperCase()] === undefined || isNaN(Number(numberObject.problemNumber))) {
+    if (profileList[numberObject.onlineJudgeName.toUpperCase()] === undefined) {
         return null;
     }
     return numberObject;

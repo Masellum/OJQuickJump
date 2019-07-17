@@ -2,7 +2,7 @@
   "manifest_version": 2,
 
   "name": "OJ Quick Jump",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "This extension helps you to jump to a problem page on an OJ quickly.",
   "author": "Masellum",
 
