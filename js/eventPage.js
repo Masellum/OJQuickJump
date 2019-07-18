@@ -9,6 +9,6 @@ chrome.runtime.onInstalled.addListener(function (details) {
         chrome.storage.sync.set({ "profileList": profileList });
     });
     chrome.tabs.create({
-        url: `chrome-extension://${chrome.i18n.getMessage("@@extension_id")}/options.html`
+        url: `chrome-extension://${chrome.i18n.getMessage("@@extension_id")}/html/options.html`
     });
 })
